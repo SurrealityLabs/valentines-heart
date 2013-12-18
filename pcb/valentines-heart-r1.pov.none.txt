@@ -1,0 +1,4 @@
+Parts not found in 3dpack.dat or 3dusrpac.dat are:
+//BATT1		CR2032-THRU
+//LOGO1	OSHW_LOGO_FILLX0100-NT	OSHW_FILLX100_NOTEXT
+//U$1		RGLOGO_SMALL_2013

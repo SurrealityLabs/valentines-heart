@@ -479,11 +479,12 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
+Views=" 1: -55070 -42368 2542366 1894528"
 Sheet=1
 
 [Win_3]
 Type="Board Editor"
-Loc="-3 22 1916 1113"
+Loc="0 22 1919 1113"
 State=2
 Number=2
 File="valentines-heart-r1.brd"
