@@ -24,7 +24,7 @@ inline void writeCharlieplexLED(void) {
     static uint8_t currentLED = 0;
 
     DDRB = 0b00000000;
-    PORTB = 0b00000000;
+    PORTB = 0b00100000;
     switch(currentLED) {
         case 0:
         case 1:
@@ -65,35 +65,35 @@ inline void writeCharlieplexLED(void) {
             case 12:
             case 16:
                 DDRB |= ((1 << OUTPUT_0));
-                PORTB = ((1 << OUTPUT_0));
+                PORTB = ((1 << 5) | (1 << OUTPUT_0));
                 break;
             case 0:
             case 9:
             case 13:
             case 17:
                 DDRB |= ((1 << OUTPUT_1));
-                PORTB = ((1 << OUTPUT_1));
+                PORTB = ((1 << 5) | (1 << OUTPUT_1));
                 break;
             case 1:
             case 5:
             case 14:
             case 18:
                 DDRB |= ((1 << OUTPUT_2));
-                PORTB = ((1 << OUTPUT_2));
+                PORTB = ((1 << 5) | (1 << OUTPUT_2));
                 break;
             case 2:
             case 6:
             case 10:
             case 19:
                 DDRB |= ((1 << OUTPUT_3));
-                PORTB = ((1 << OUTPUT_3));
+                PORTB = ((1 << 5) | (1 << OUTPUT_3));
                 break;
             case 3:
             case 7:
             case 11:
             case 15:
                 DDRB |= ((1 << OUTPUT_4));
-                PORTB = ((1 << OUTPUT_4));
+                PORTB = ((1 << 5) | (1 << OUTPUT_4));
                 break;
         }
     }

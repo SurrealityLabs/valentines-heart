@@ -27,7 +27,7 @@ along with Valentines Heart 1.0.  If not, see <http://www.gnu.org/licenses/>.
 
 int main(void) {
     DDRB = 0b00011111;
-    PORTB = 0b00000000;
+    PORTB = 0b00100000;
     DIDR0 = 0;
     ACSR |= (1 << ACD);
     ADCSRA &= ~(1 << ADEN);

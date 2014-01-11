@@ -52,21 +52,25 @@ void heartTopFill(uint16_t fillInterval) {
 
     cli();
 
-    if(frameCount >= (22 * fillInterval)) {
+    if(frameCount >= (32 * fillInterval)) {
         frameCount = 0;
     } else if(frameCount >= (11 * fillInterval)) {
         currentStage = (frameCount / fillInterval) - 11;
         setAll(1);
         for(i = 0; i <= currentStage; i++) {
             charlieArray[i] = 0;
-            charlieArray[20-i] = 0;
+            if(i) {
+                charlieArray[20-i] = 0;
+            }
         }
     } else {
         currentStage = frameCount / fillInterval;
         setAll(0);
         for(i = 0; i <= currentStage; i++) {
             charlieArray[i] = 1;
-            charlieArray[20-i] = 1;
+            if(i) {
+                charlieArray[20-i] = 1;
+            }
         }
     }
 
@@ -143,16 +147,16 @@ void modeSwitcher(uint8_t mode) {
             heartAlternate(300);
             break;
         case 4:
-            heartTopFill(300);
+            heartTopFill(150);
             break;
         case 5:
             heartMarquee(300);
             break;
         case 6:
-            heartChaser(300);
+            heartChaser(150);
             break;
         case 7:
-            heartChaserInverse(300);
+            heartChaserInverse(150);
             break;
         default:
             mode = 0;
